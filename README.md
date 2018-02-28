@@ -2,7 +2,7 @@
 This is a minimal example illustrating the problems I have setting up a passport session with a client and a GraphQL server.
 
 ## Setting up the project
-Create the postgres database database_development.
+Create the postgres database `database_development`.
 
 Then install the node modules like this:
 ```
