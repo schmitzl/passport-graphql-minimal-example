@@ -2,15 +2,15 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Login from './Login';
 import { ApolloProvider } from 'react-apollo'
-import ApolloClient from 'apollo-boost'
+import ApolloClient from 'apollo-client'
+import { HttpLink, InMemoryCache } from 'apollo-client-preset'
 
-// Pass your GraphQL endpoint to uri
-var apolloUri = 'http://localhost:3001/graphql'; 
+var apolloUri = 'http://localhost:3001/graphql'
 
 const client = new ApolloClient({
-  uri: apolloUri 
-});
-
+  link: new HttpLink({ uri: apolloUri, credentials: 'include' }),
+  cache: new InMemoryCache()
+})
 
 ReactDOM.render(
     <ApolloProvider client={client}>

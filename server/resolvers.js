@@ -1,5 +1,5 @@
 export default {
   Query: {
-    hello: (parent, args, context, info) => 'hi',
+    hello: (parent, args, {user}) => user ? 'hi ' + user.name : 'hi',
   },
 };

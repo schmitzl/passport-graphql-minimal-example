@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 import { graphql } from 'react-apollo'
-import { gql } from 'apollo-boost'
+import gql from 'graphql-tag'
 
 const Hello = ({ data: {loading, error, hello }}) => {
   if (loading) {
